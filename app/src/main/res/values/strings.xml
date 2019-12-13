@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Store Management</string>
+
+    <string name="login_title">Login</string>
+    <string name="login_user">Usuario</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_button">Ingresar</string>
+
+    <string name="dashboard_title">Menú Principal</string>
+    <string name="dashboard_clothingbystoreButton">Stock por Local</string>
+    <string name="dashboard_salesbystoreButton">Ventas por Local</string>
+
+    <string name="clothingbystore_title">Stock por Local</string>
+</resources>
