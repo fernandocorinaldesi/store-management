@@ -1,0 +1,2 @@
+Remera,Narrow,XP,S,80.00,50.00,200
+Pantalon,Levis,Scrum,40,200.00,120.00,300

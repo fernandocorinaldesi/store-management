@@ -4,6 +4,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import softmobile.storemanagement.R;
+import softmobile.storemanagement.activity.adapter.ClothingAdapter;
 
 public class ClothingByStoreActivity extends FilterableActivity
 {
@@ -20,5 +21,12 @@ public class ClothingByStoreActivity extends FilterableActivity
     {
         spinner = (Spinner) findViewById(R.id.store_spinner);
         list = (ListView) findViewById(R.id.clothingList);
+    }
+
+    @Override
+    public void setViewsAdapters()
+    {
+        setAdapterFromResource(this, R.raw.clothing_store_a);
+        list.setAdapter(new ClothingAdapter());
     }
 }
