@@ -26,7 +26,7 @@ public class ClothingByStoreActivity extends FilterableActivity
     @Override
     public void setViewsAdapters()
     {
-        setAdapterFromResource(this, R.raw.clothing_store_a);
+        setAdapterFromResource(this, R.array.stores);
         list.setAdapter(new ClothingAdapter());
     }
 }
