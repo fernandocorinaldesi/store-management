@@ -13,7 +13,8 @@ import softmobile.storemanagement.model.Parsable;
 
 public class ClothingAdapter extends EntityAdapter
 {
-    public ClothingAdapter(LayoutInflater inflater, List<Parsable> parsables) {
+    public ClothingAdapter(LayoutInflater inflater, List<Parsable> parsables)
+    {
         super(inflater, parsables);
     }
 

@@ -30,6 +30,6 @@ public class ClothingByStoreActivity extends FilterableActivity
     public void setViewsAdapters()
     {
         setAdapterFromResource(this, R.array.stores);
-        list.setAdapter(new ClothingAdapter((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE), new ClothingMapper().map(FileReader.readFile(this.getResources().openRawResource(R.raw.clothing_store_a)))));
+        list.setAdapter(new ClothingAdapter(LayoutInflater.from(this), new ClothingMapper().map(FileReader.readFile(this.getResources().openRawResource(R.raw.clothing_store_a)))));
     }
 }
