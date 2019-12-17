@@ -15,8 +15,6 @@ public abstract class FilterableActivity extends BaseActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setLayout();
-        setViews();
         setViewsAdapters();
     }
 

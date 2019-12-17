@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FileReader
 {
-    public List<String> readFile(InputStream inputStream)
+    public static List<String> readFile(InputStream inputStream)
     {
         try
         {
@@ -22,7 +22,7 @@ public class FileReader
         }
     }
 
-    private List<String> read(InputStream inputStream) throws IOException
+    private static List<String> read(InputStream inputStream) throws IOException
     {
         List<String> list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));

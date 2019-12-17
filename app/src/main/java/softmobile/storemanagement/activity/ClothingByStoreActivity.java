@@ -1,10 +1,13 @@
 package softmobile.storemanagement.activity;
 
+import android.view.LayoutInflater;
 import android.widget.ListView;
 import android.widget.Spinner;
 
 import softmobile.storemanagement.R;
 import softmobile.storemanagement.activity.adapter.ClothingAdapter;
+import softmobile.storemanagement.activity.mapper.ClothingMapper;
+import softmobile.storemanagement.file.FileReader;
 
 public class ClothingByStoreActivity extends FilterableActivity
 {
@@ -27,6 +30,6 @@ public class ClothingByStoreActivity extends FilterableActivity
     public void setViewsAdapters()
     {
         setAdapterFromResource(this, R.array.stores);
-        list.setAdapter(new ClothingAdapter());
+        list.setAdapter(new ClothingAdapter((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE), new ClothingMapper().map(FileReader.readFile(this.getResources().openRawResource(R.raw.clothing_store_a)))));
     }
 }

@@ -66,7 +66,7 @@ public class Clothing implements Parsable
         Map<String, String> map = new HashMap<String, String>();
         map.put("Tipo", type);
         map.put("Marca", brand);
-        map.put("Modelo", model);
+        map.put("Modelo: ", model);
         map.put("Talle", size);
         map.put("Precio por Menor", retailPrice.toString());
         map.put("Precio por Mayor", wholesalePrice.toString());

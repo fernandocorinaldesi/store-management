@@ -1,11 +1,25 @@
 package softmobile.storemanagement.activity.adapter;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class ClothingAdapter extends BaseAdapter
+import java.util.List;
+
+import softmobile.storemanagement.model.Parsable;
+
+public abstract class EntityAdapter extends BaseAdapter
 {
+    protected LayoutInflater inflater;
+    protected List<Parsable> parsables;
+
+    public EntityAdapter(LayoutInflater inflater, List<Parsable> parsables)
+    {
+        this.inflater = inflater;
+        this.parsables = parsables;
+    }
+
     @Override
     public int getCount() {
         return 0;
@@ -13,7 +27,7 @@ public class ClothingAdapter extends BaseAdapter
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return parsables.get(position);
     }
 
     @Override
