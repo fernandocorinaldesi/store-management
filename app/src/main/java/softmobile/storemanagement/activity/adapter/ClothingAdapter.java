@@ -11,7 +11,7 @@ import softmobile.storemanagement.R;
 import softmobile.storemanagement.model.Clothing;
 import softmobile.storemanagement.model.Parsable;
 
-public class ClothingAdapter extends EntityAdapter
+public class ClothingAdapter extends ItemAdapter
 {
     public ClothingAdapter(LayoutInflater inflater, List<Parsable> parsables)
     {
@@ -21,7 +21,7 @@ public class ClothingAdapter extends EntityAdapter
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        convertView = inflater.inflate(R.layout.list_item, null, false);
+        convertView = inflater.inflate(R.layout.clothing_list_item, null, false);
         Parsable item = (Clothing) getItem(position);
         TextView type = (TextView) convertView.findViewById(R.id.typeText);
         TextView brand = (TextView) convertView.findViewById(R.id.brandText);

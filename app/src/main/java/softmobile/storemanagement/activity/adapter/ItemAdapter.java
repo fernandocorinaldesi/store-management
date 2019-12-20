@@ -9,25 +9,25 @@ import java.util.List;
 
 import softmobile.storemanagement.model.Parsable;
 
-public abstract class EntityAdapter extends BaseAdapter
+public abstract class ItemAdapter extends BaseAdapter
 {
     protected LayoutInflater inflater;
-    protected List<Parsable> parsables;
+    protected List<Parsable> items;
 
-    public EntityAdapter(LayoutInflater inflater, List<Parsable> parsables)
+    public ItemAdapter(LayoutInflater inflater, List<Parsable> items)
     {
         this.inflater = inflater;
-        this.parsables = parsables;
+        this.items = items;
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return items.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return parsables.get(position);
+        return items.get(position);
     }
 
     @Override
