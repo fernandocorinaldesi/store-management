@@ -1,5 +1,6 @@
 package softmobile.storemanagement.activity.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,20 +9,22 @@ import android.widget.TextView;
 import java.util.List;
 
 import softmobile.storemanagement.R;
+import softmobile.storemanagement.activity.mapper.ClothingMapper;
+import softmobile.storemanagement.activity.mapper.Mapper;
 import softmobile.storemanagement.model.Clothing;
 import softmobile.storemanagement.model.Parsable;
 
 public class ClothingAdapter extends ItemAdapter
 {
-    public ClothingAdapter(LayoutInflater inflater, List<Parsable> parsables)
+    public ClothingAdapter(Context context, List<Parsable> items)
     {
-        super(inflater, parsables);
+        super(context, items);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        convertView = inflater.inflate(R.layout.clothing_list_item, null, false);
+        convertView = LayoutInflater.from(context).inflate(R.layout.clothing_list_item, null, false);
         Parsable item = (Clothing) getItem(position);
         TextView type = (TextView) convertView.findViewById(R.id.typeText);
         TextView brand = (TextView) convertView.findViewById(R.id.brandText);
@@ -39,5 +42,11 @@ public class ClothingAdapter extends ItemAdapter
         wholesalePrice.setText("Por Mayor: $" + item.parse().get("Precio por Mayor"));
         stock.setText("Stock: " + item.parse().get("Stock"));
         return convertView;
+    }
+
+    @Override
+    public List<Parsable> getList(int resId)
+    {
+        return new ClothingMapper().map(context.getResources().openRawResource(resId));
     }
 }

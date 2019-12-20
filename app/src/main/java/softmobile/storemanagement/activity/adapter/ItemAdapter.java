@@ -1,22 +1,23 @@
 package softmobile.storemanagement.activity.adapter;
 
-import android.view.LayoutInflater;
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.List;
 
+import softmobile.storemanagement.activity.mapper.Mapper;
 import softmobile.storemanagement.model.Parsable;
 
 public abstract class ItemAdapter extends BaseAdapter
 {
-    protected LayoutInflater inflater;
+    protected Context context;
     protected List<Parsable> items;
 
-    public ItemAdapter(LayoutInflater inflater, List<Parsable> items)
+    public ItemAdapter(Context context, List<Parsable> items)
     {
-        this.inflater = inflater;
+        this.context = context;
         this.items = items;
     }
 
@@ -39,4 +40,16 @@ public abstract class ItemAdapter extends BaseAdapter
     public View getView(int position, View convertView, ViewGroup parent) {
         return null;
     }
+
+    public void swapItems(int resId)
+    {
+        items.clear();
+        for(Parsable item : getList(resId))
+        {
+            items.add(item);
+        }
+        notifyDataSetChanged();
+    }
+
+    public abstract List<Parsable> getList(int resId);
 }
