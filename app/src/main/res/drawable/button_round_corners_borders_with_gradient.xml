@@ -16,11 +16,16 @@
     </item>
     <item>
         <shape android:shape="oval">
-            <solid android:color="#ffffff" />
+            <gradient
+                android:angle="270"
+                android:endColor="#C0BFBF"
+                android:centerColor="#ffffff"
+                android:startColor="#ffffff" />
             <corners android:radius="30dp" />
             <size
                 android:width="30dp"
                 android:height="30dp" />
         </shape>
     </item>
+
 </layer-list>
