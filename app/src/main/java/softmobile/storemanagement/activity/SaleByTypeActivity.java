@@ -6,30 +6,29 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import softmobile.storemanagement.R;
-import softmobile.storemanagement.activity.adapter.ClothingAdapter;
 import softmobile.storemanagement.activity.adapter.ItemAdapter;
-import softmobile.storemanagement.activity.mapper.ClothingMapper;
+import softmobile.storemanagement.activity.adapter.SaleAdapter;
+import softmobile.storemanagement.activity.mapper.SaleMapper;
 
-public class ClothingByStoreActivity extends FilterableActivity implements AdapterView.OnItemSelectedListener
+public class SaleByTypeActivity extends FilterableActivity implements AdapterView.OnItemSelectedListener
 {
     @Override
-    public void setLayout()
-    {
-        setContentView(R.layout.activity_clothing_by_store);
+    public void setLayout() {
+        setContentView(R.layout.activity_sale_by_type);
     }
 
     @Override
     public void setViews()
     {
-        spinner = (Spinner) findViewById(R.id.store_spinner);
-        list = (ListView) findViewById(R.id.clothingList);
+        spinner = (Spinner) findViewById(R.id.saleTypespinner);
+        list = (ListView) findViewById(R.id.salesList);
     }
 
     @Override
     public void setViewsAdapters()
     {
-        setAdapterFromResource(this, R.array.stores);
-        list.setAdapter(new ClothingAdapter(this, new ClothingMapper().map(this.getResources().openRawResource(R.raw.clothing_store_a))));
+        setAdapterFromResource(this, R.array.saleTypes);
+        list.setAdapter(new SaleAdapter(this, new SaleMapper().map(this.getResources().openRawResource(R.raw.retail_sales))));
         spinner.setOnItemSelectedListener(this);
     }
 
@@ -39,9 +38,9 @@ public class ClothingByStoreActivity extends FilterableActivity implements Adapt
         ItemAdapter adapter = (ItemAdapter) list.getAdapter();
         switch (position)
         {
-            case 0: adapter.swapItems(R.raw.clothing_store_a);
+            case 0: adapter.swapItems(R.raw.retail_sales);
             break;
-            case 1: adapter.swapItems(R.raw.clothing_store_b);
+            case 1: adapter.swapItems(R.raw.wholesale_sales);
             break;
         }
     }

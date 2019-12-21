@@ -10,7 +10,7 @@
     <string name="dashboard_salesbystoreButton">Ventas por Local</string>
     <string name="clothingbystore_title">Stock por Local</string>
 
-
+    <string name="salesbytype_title">Venta por tipo</string>
 
 
     <string name="fieldUser">Usuario</string>
@@ -24,7 +24,6 @@
     <string name="clickHere">Has click aqui</string>
     <string name="recoverWindow">recuperacion de contraseña</string>
     <string name="showPass">Mostrar contraseña</string>
-
 
 
 </resources>
