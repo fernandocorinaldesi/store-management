@@ -5,10 +5,26 @@
     <string name="login_user">Usuario</string>
     <string name="login_password">Contraseña</string>
     <string name="login_button">Ingresar</string>
-
     <string name="dashboard_title">Menú Principal</string>
-    <string name="dashboard_clothingbystoreButton">Stock por Local</string>
+    <string name="dashboard_clothingbystoreButton">Stock</string>
     <string name="dashboard_salesbystoreButton">Ventas por Local</string>
-
     <string name="clothingbystore_title">Stock por Local</string>
+
+
+
+
+    <string name="fieldUser">Usuario</string>
+    <string name="fieldPass">Contraseña</string>
+    <string name="fieldMail">Ingrese su Email</string>
+    <string name="loginButton">Ingresar</string>
+    <string name="loginWelcome">Pantalla de login</string>
+    <string name="hintUser">Ingresar usuario</string>
+    <string name="hintPass">Ingresar contraseña</string>
+    <string name="forgotPass">¿olvidaste la contraseña?,</string>
+    <string name="clickHere">Has click aqui</string>
+    <string name="recoverWindow">recuperacion de contraseña</string>
+    <string name="showPass">Mostrar contraseña</string>
+
+
+
 </resources>
