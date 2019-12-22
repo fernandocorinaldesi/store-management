@@ -24,6 +24,13 @@
     <string name="clickHere">Has click aqui</string>
     <string name="recoverWindow">recuperacion de contraseña</string>
     <string name="showPass">Mostrar contraseña</string>
+    <string name="optExit">SALIR</string>
+    <string name="optClient">CLIENTES</string>
+    <string name="optSales">VENTAS</string>
+    <string name="optStock">STOCK</string>
+    <string name="optExtra1">EXTRA 1</string>
+    <string name="optExtra2">EXTRA 2</string>
+    <string name="welcome">Bienvenido</string>
 
 
 </resources>
