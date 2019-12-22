@@ -10,7 +10,7 @@
     <string name="dashboard_salesbystoreButton">Ventas por Local</string>
     <string name="clothingbystore_title">Stock por Local</string>
 
-
+    <string name="salesbytype_title">Venta por tipo</string>
 
 
     <string name="fieldUser">Usuario</string>
@@ -31,7 +31,6 @@
     <string name="optExtra1">EXTRA 1</string>
     <string name="optExtra2">EXTRA 2</string>
     <string name="welcome">Bienvenido</string>
-
 
 
 </resources>

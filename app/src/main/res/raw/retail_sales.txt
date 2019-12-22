@@ -1,0 +1,4 @@
+Venta por Menor,500.00,Luchis - Jose C. Paz,Carlos Perez,21/10/2019
+Venta por Menor,150.00,Luchis - Moreno,Mirta Candia,11/09/2019
+Venta por Menor,300.00,Luchis - Moreno,Mirta Candia,19/06/2019
+Venta por Menor,270.00,Luchis - Jose C. Paz,Carlos Perez,12/12/2019

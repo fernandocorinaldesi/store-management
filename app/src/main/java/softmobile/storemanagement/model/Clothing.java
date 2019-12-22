@@ -63,14 +63,14 @@ public class Clothing implements Parsable
     @Override
     public Map<String, String> parse()
     {
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("Tipo", type);
-        map.put("Marca", brand);
-        map.put("Modelo: ", model);
-        map.put("Talle", size);
-        map.put("Precio por Menor", retailPrice.toString());
-        map.put("Precio por Mayor", wholesalePrice.toString());
-        map.put("Stock", stock.toString());
-        return map;
+        Map<String, String> attributes = new HashMap<String, String>();
+        attributes.put("Tipo", type);
+        attributes.put("Marca", brand);
+        attributes.put("Modelo: ", model);
+        attributes.put("Talle", size);
+        attributes.put("Precio por Menor", retailPrice.toString());
+        attributes.put("Precio por Mayor", wholesalePrice.toString());
+        attributes.put("Stock", stock.toString());
+        return attributes;
     }
 }
