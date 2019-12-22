@@ -4,66 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondobebewhite"
     tools:context=".activity.MainDashboardActivity">
 
     <Button
         android:id="@+id/clothingByStoreButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="84dp"
-        android:background="@drawable/button_round_corners_borders_with_gradient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/button_round_corners_gradient_stock"
+        android:drawableTop="@drawable/stockwhite"
+        android:foreground="?android:attr/selectableItemBackground"
         android:onClick="onClickButton"
-        android:text="@string/dashboard_clothingbystoreButton"
+        android:text="@string/optStock"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="@string/optStock" />
 
     <Button
         android:id="@+id/salesByStoreButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="92dp"
-        android:background="@drawable/button_round_corners_borders_with_gradient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_round_corners_gradient_venta"
+        android:drawableTop="@drawable/ventas"
+        android:foreground="?android:attr/selectableItemBackground"
         android:onClick="onClickButton"
-        android:text="ventas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        android:text="@string/optSales"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clothingByStoreButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="@string/optSales" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_round_corner_gradient_cliente"
+        android:drawableTop="@drawable/clientes"
+        android:text="@string/optClient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salesByStoreButton"
+        tools:text="@string/optClient" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/button_round_corners_gradient_salir"
+        android:drawableTop="@drawable/exit"
+        android:text="@string/optExit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clothingByStoreButton"
+        tools:text="@string/optExit" />
+
+    <Button
+        android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_round_corners_gradient_extra2"
+        android:drawableTop="@drawable/help"
+        android:text="@string/optExtra1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_menu_title" />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="184dp"
-        android:background="@drawable/button_round_corners_borders_with_gradient"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="184dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:background="@drawable/button_round_corners_borders_with_gradient"
-        android:text="Button"
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/button_round_corners_gradient_extra1"
+        android:drawableTop="@drawable/help"
+        android:text="@string/optExtra2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/welcome"
+        android:textColor="#97395A"
+        android:textSize="36sp"
+        app:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

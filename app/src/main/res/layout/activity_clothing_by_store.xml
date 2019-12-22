@@ -8,31 +8,35 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:text="@string/clothingbystore_title"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/store_spinner"
-        android:layout_width="357dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_round_corners_gradient_stock"
+        android:popupBackground="@drawable/spinerback_gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ListView
         android:id="@+id/clothingList"
-        android:layout_width="405dp"
-        android:layout_height="390dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@drawable/divider_gradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_spinner"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintTop_toBottomOf="@+id/store_spinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>
