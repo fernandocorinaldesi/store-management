@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileReader
+public class TextFileReader
 {
     public static List<String> readFile(InputStream inputStream)
     {

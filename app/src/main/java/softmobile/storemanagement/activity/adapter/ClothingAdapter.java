@@ -45,7 +45,7 @@ public class ClothingAdapter extends ItemAdapter
     }
 
     @Override
-    public List<Parsable> getList(int resId)
+    public List<Parsable> getItems(int resId)
     {
         return new ClothingMapper().map(context.getResources().openRawResource(resId));
     }

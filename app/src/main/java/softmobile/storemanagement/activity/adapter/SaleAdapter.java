@@ -40,7 +40,7 @@ public class SaleAdapter extends ItemAdapter
     }
 
     @Override
-    public List<Parsable> getList(int resId)
+    public List<Parsable> getItems(int resId)
     {
         return new SaleMapper().map(context.getResources().openRawResource(resId));
     }
