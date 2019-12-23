@@ -10,7 +10,7 @@ import softmobile.storemanagement.R;
 import softmobile.storemanagement.activity.adapter.ItemAdapter;
 import softmobile.storemanagement.activity.adapter.SaleAdapter;
 
-public class SaleByTypeActivity extends FilterableActivity implements AdapterView.OnItemSelectedListener
+public class SaleByTypeActivity extends FilterableActivity
 {
     private TextView totalText;
 
@@ -33,46 +33,48 @@ public class SaleByTypeActivity extends FilterableActivity implements AdapterVie
     {
         setAdapterFromResource(this, R.array.saleTypes);
         list.setAdapter(new SaleAdapter(this));
-        spinner.setOnItemSelectedListener(this);
+        spinner.setOnItemSelectedListener(new SaleOnItemSelectedListener());
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+    private class SaleOnItemSelectedListener implements AdapterView.OnItemSelectedListener
     {
-        ItemAdapter adapter = getListAdapter();
-        switch (position)
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
         {
-            case 0: adapter.swapItems(R.raw.total_sales);
-            break;
-            case 1: adapter.swapItems(R.raw.retail_sales);
-            break;
-            case 2: adapter.swapItems(R.raw.wholesale_sales);
-            break;
+            ItemAdapter adapter = getListAdapter();
+            switch (position)
+            {
+                case 0: adapter.swapItems(R.raw.total_sales);
+                    break;
+                case 1: adapter.swapItems(R.raw.retail_sales);
+                    break;
+                case 2: adapter.swapItems(R.raw.wholesale_sales);
+                    break;
+            }
+            totalText.setText("Total: $" + getTotalByPosition(position));
         }
-        totalText.setText("Total: $" + getTotalByPosition(position));
-    }
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent)
-    {
-        totalText.setText("Total: $4870");
-        ItemAdapter adapter = getListAdapter();
-        adapter.loadItems(R.raw.total_sales);
-
-    }
-
-    private String getTotalByPosition(int position)
-    {
-        String total = "";
-        switch (position)
+        @Override
+        public void onNothingSelected(AdapterView<?> parent)
         {
-            case 0: total = "4870";
-            break;
-            case 1: total = "1220";
-            break;
-            case 2: total = "3650";
-            break;
+            totalText.setText("Total: $4870");
+            ItemAdapter adapter = getListAdapter();
+            adapter.loadItems(R.raw.total_sales);
         }
-        return total;
+
+        private String getTotalByPosition(int position)
+        {
+            String total = "";
+            switch (position)
+            {
+                case 0: total = "4870";
+                break;
+                case 1: total = "1220";
+                break;
+                case 2: total = "3650";
+                break;
+            }
+            return total;
+        }
     }
 }
