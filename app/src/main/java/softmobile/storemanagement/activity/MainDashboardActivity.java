@@ -21,7 +21,7 @@ public class MainDashboardActivity extends BaseActivity
         {
             case R.id.clothingByStoreButton: goToActivity(this, ClothingByStoreActivity.class);
             break;
-            case  R.id.salesByStoreButton: goToActivity(this, LoginActivity.class);
+            case  R.id.salesByTypeButton: goToActivity(this, SaleByTypeActivity.class);
             break;
         }
     }

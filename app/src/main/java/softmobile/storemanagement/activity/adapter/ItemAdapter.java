@@ -7,7 +7,6 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
-import softmobile.storemanagement.activity.mapper.Mapper;
 import softmobile.storemanagement.model.Parsable;
 
 public abstract class ItemAdapter extends BaseAdapter
@@ -22,12 +21,14 @@ public abstract class ItemAdapter extends BaseAdapter
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return items.size();
     }
 
     @Override
-    public Object getItem(int position) {
+    public Object getItem(int position)
+    {
         return items.get(position);
     }
 
@@ -44,12 +45,12 @@ public abstract class ItemAdapter extends BaseAdapter
     public void swapItems(int resId)
     {
         items.clear();
-        for(Parsable item : getList(resId))
+        for(Parsable item : getItems(resId))
         {
             items.add(item);
         }
         notifyDataSetChanged();
     }
 
-    public abstract List<Parsable> getList(int resId);
+    public abstract List<Parsable> getItems(int resId);
 }
