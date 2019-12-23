@@ -32,7 +32,6 @@ public class LoginActivity extends BaseActivity
 
     public void login(View view)
     {
-        setViews();
         if(validateLogin(userName.getText().toString(), userPassword.getText().toString()))
         {
             goToActivity(this, MainDashboardActivity.class);
