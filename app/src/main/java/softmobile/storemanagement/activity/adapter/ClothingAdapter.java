@@ -28,6 +28,7 @@ public class ClothingAdapter extends ItemAdapter
         TextView type = (TextView) convertView.findViewById(R.id.typeText);
         TextView brand = (TextView) convertView.findViewById(R.id.brandText);
         TextView model = (TextView) convertView.findViewById(R.id.modelText);
+        TextView size = (TextView) convertView.findViewById(R.id.sizeText);
         TextView prices = (TextView) convertView.findViewById(R.id.priceText);
         TextView retailPrice = (TextView) convertView.findViewById(R.id.retailPriceText);
         TextView wholesalePrice = (TextView) convertView.findViewById(R.id.wholesalePriceText);
@@ -36,6 +37,7 @@ public class ClothingAdapter extends ItemAdapter
         type.setText(item.parse().get("Tipo"));
         brand.setText(item.parse().get("Marca"));
         model.setText("Modelo: " + item.parse().get("Modelo"));
+        size.setText("Talle: " + item.parse().get("Talle"));
         prices.setText("Precios");
         retailPrice.setText("Por Menor: $" + item.parse().get("Precio por Menor"));
         wholesalePrice.setText("Por Mayor: $" + item.parse().get("Precio por Mayor"));
