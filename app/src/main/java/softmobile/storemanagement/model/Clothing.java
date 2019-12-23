@@ -25,41 +25,6 @@ public class Clothing implements Parsable
         this.stock = stock;
     }
 
-    public String getType()
-    {
-        return type;
-    }
-
-    public String getBrand()
-    {
-        return brand;
-    }
-
-    public String getModel()
-    {
-        return model;
-    }
-
-    public String getSize()
-    {
-        return size;
-    }
-
-    public double getRetailPrice()
-    {
-        return retailPrice;
-    }
-
-    public double getWholesalePrice()
-    {
-        return wholesalePrice;
-    }
-
-    public int getStock()
-    {
-        return stock;
-    }
-
     @Override
     public Map<String, String> parse()
     {

@@ -8,7 +8,6 @@ import android.widget.Spinner;
 import softmobile.storemanagement.R;
 import softmobile.storemanagement.activity.adapter.ClothingAdapter;
 import softmobile.storemanagement.activity.adapter.ItemAdapter;
-import softmobile.storemanagement.activity.mapper.ClothingMapper;
 
 public class ClothingByStoreActivity extends FilterableActivity implements AdapterView.OnItemSelectedListener
 {
@@ -29,23 +28,29 @@ public class ClothingByStoreActivity extends FilterableActivity implements Adapt
     public void setViewsAdapters()
     {
         setAdapterFromResource(this, R.array.stores);
-        list.setAdapter(new ClothingAdapter(this, new ClothingMapper().map(this.getResources().openRawResource(R.raw.clothing_store_a))));
+        list.setAdapter(new ClothingAdapter(this));
         spinner.setOnItemSelectedListener(this);
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
     {
-        ItemAdapter adapter = (ItemAdapter) list.getAdapter();
+        ItemAdapter adapter = getListAdapter();
         switch (position)
         {
-            case 0: adapter.swapItems(R.raw.clothing_store_a);
+            case 0: adapter.swapItems(R.raw.clothing_stores_total);
             break;
-            case 1: adapter.swapItems(R.raw.clothing_store_b);
+            case 1: adapter.swapItems(R.raw.clothing_store_a);
+            break;
+            case 2: adapter.swapItems(R.raw.clothing_store_b);
             break;
         }
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {}
+    public void onNothingSelected(AdapterView<?> parent)
+    {
+        ItemAdapter adapter = getListAdapter();
+        adapter.loadItems(R.raw.clothing_stores_total);
+    }
 }

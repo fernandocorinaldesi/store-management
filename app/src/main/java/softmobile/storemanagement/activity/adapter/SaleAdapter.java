@@ -15,9 +15,9 @@ import softmobile.storemanagement.model.Sale;
 
 public class SaleAdapter extends ItemAdapter
 {
-    public SaleAdapter(Context context, List<Parsable> items)
+    public SaleAdapter(Context context)
     {
-        super(context, items);
+        super(context);
     }
 
     @Override
@@ -32,10 +32,10 @@ public class SaleAdapter extends ItemAdapter
         TextView seller = (TextView) convertView.findViewById(R.id.sellerText);
 
         type.setText(item.parse().get("Tipo"));
-        amount.setText(item.parse().get("Monto"));
+        amount.setText("Monto: $" + item.parse().get("Monto"));
         date.setText(item.parse().get("Fecha"));
         store.setText(item.parse().get("Local"));
-        seller.setText(item.parse().get("Vendedor"));
+        seller.setText("Vendedor: " + item.parse().get("Vendedor"));
         return convertView;
     }
 

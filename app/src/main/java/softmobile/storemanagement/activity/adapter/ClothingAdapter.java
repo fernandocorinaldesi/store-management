@@ -10,15 +10,14 @@ import java.util.List;
 
 import softmobile.storemanagement.R;
 import softmobile.storemanagement.activity.mapper.ClothingMapper;
-import softmobile.storemanagement.activity.mapper.Mapper;
 import softmobile.storemanagement.model.Clothing;
 import softmobile.storemanagement.model.Parsable;
 
 public class ClothingAdapter extends ItemAdapter
 {
-    public ClothingAdapter(Context context, List<Parsable> items)
+    public ClothingAdapter(Context context)
     {
-        super(context, items);
+        super(context);
     }
 
     @Override

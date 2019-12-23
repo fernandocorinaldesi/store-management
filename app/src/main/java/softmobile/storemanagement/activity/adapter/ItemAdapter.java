@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import softmobile.storemanagement.model.Parsable;
@@ -14,10 +15,10 @@ public abstract class ItemAdapter extends BaseAdapter
     protected Context context;
     protected List<Parsable> items;
 
-    public ItemAdapter(Context context, List<Parsable> items)
+    public ItemAdapter(Context context)
     {
         this.context = context;
-        this.items = items;
+        this.items = new ArrayList<Parsable>();
     }
 
     @Override
@@ -45,12 +46,17 @@ public abstract class ItemAdapter extends BaseAdapter
     public void swapItems(int resId)
     {
         items.clear();
-        for(Parsable item : getItems(resId))
-        {
-            items.add(item);
-        }
+        loadItems(resId);
         notifyDataSetChanged();
     }
 
     public abstract List<Parsable> getItems(int resId);
+
+    public void loadItems(int resId)
+    {
+        for (Parsable item : getItems(resId))
+        {
+            items.add(item);
+        }
+    }
 }

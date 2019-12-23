@@ -6,6 +6,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import softmobile.storemanagement.activity.adapter.ItemAdapter;
+
 public abstract class FilterableActivity extends BaseActivity
 {
     protected Spinner spinner;
@@ -24,5 +26,10 @@ public abstract class FilterableActivity extends BaseActivity
     {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, textArrayResId, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
+    }
+
+    protected ItemAdapter getListAdapter()
+    {
+        return (ItemAdapter) list.getAdapter();
     }
 }

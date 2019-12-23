@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="saleTypes">
+        <item>Ventas Totales</item>
         <item>Ventas al por Menor</item>
         <item>Ventas al por Mayor</item>
     </string-array>
