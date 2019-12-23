@@ -13,6 +13,7 @@ public class LoginActivity extends BaseActivity
 {
     private EditText userName;
     private EditText userPassword;
+    private CheckBox showPassword;
 
     @Override
     public void setLayout()
@@ -25,7 +26,8 @@ public class LoginActivity extends BaseActivity
     {
         userName = (EditText) findViewById(R.id.userText);
         userPassword = (EditText) findViewById(R.id.passText);
-        setCheckBox();
+        showPassword = (CheckBox) findViewById(R.id.checkBox);
+        showPassword.setOnCheckedChangeListener(new LoginOnCheckedChangeListener());
     }
 
     public void login(View view)
@@ -45,26 +47,20 @@ public class LoginActivity extends BaseActivity
     {
         return (userName.equals("usuario") && password.equals("1234"));
     }
-    public void setCheckBox(){
-        EditText mEtPwd;
-        CheckBox mCbShowPwd;
-        userPassword = (EditText) findViewById(R.id.passText);
-        mCbShowPwd = (CheckBox) findViewById(R.id.checkBox);
 
-        mCbShowPwd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // checkbox status is changed from uncheck to checked.
-                if (!isChecked) {
-                    // show password
-                    userPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } else {
-                    // hide password
-                    userPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                }
+    private class LoginOnCheckedChangeListener implements CompoundButton.OnCheckedChangeListener
+    {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+        {
+            if (!isChecked)
+            {
+                userPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
             }
-        });
-
+            else
+            {
+                userPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            }
+        }
     }
-
 }
