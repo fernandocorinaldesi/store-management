@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SaleByTypeActivity"></activity>
-        <activity android:name=".activity.ClothingByStoreActivity" />
+        <activity android:name=".activity.SaleByTypeActivity" android:parentActivityName=".activity.MainDashboardActivity"/>
+        <activity android:name=".activity.ClothingByStoreActivity" android:parentActivityName=".activity.MainDashboardActivity"/>
         <activity android:name=".activity.MainDashboardActivity" />
         <activity android:name=".activity.LoginActivity">
             <intent-filter>
