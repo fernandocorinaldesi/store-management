@@ -147,7 +147,6 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:onClick="recoverPass"
         android:text="@string/clickHere"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"

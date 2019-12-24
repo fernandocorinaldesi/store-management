@@ -37,7 +37,7 @@
         android:layout_marginStart="65dp"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_round_corners_gradient_venta"
+        android:background="@drawable/button_round_corners_gradient_stock"
         android:drawableTop="@drawable/ventas"
         android:foreground="?android:attr/selectableItemBackground"
         android:onClick="onClickButton"
@@ -59,7 +59,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
-        android:background="@drawable/button_round_corners_gradient_salir"
+        android:background="@drawable/button_round_corners_gradient_stock"
+
         android:drawableTop="@drawable/exit"
         android:drawablePadding="15dp"
         android:gravity="center"
@@ -79,7 +80,8 @@
         android:layout_marginStart="65dp"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_round_corner_gradient_cliente"
+        android:background="@drawable/button_round_corners_gradient_stock"
+
         android:drawableTop="@drawable/clientes"
         android:drawablePadding="15dp"
         android:gravity="center"
@@ -99,7 +101,8 @@
         android:layout_marginStart="65dp"
         android:layout_marginLeft="65dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_round_corners_gradient_extra1"
+        android:background="@drawable/button_round_corners_gradient_stock"
+
         android:drawableTop="@drawable/help"
         android:drawablePadding="15dp"
         android:gravity="center"
@@ -118,7 +121,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
-        android:background="@drawable/button_round_corners_gradient_extra2"
+        android:background="@drawable/button_round_corners_gradient_stock"
+
         android:drawableTop="@drawable/help"
         android:text="@string/optExtra2"
         android:drawablePadding="15dp"
@@ -139,7 +143,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="36sp"
 
-        app:fontFamily="monospace"
+        app:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
