@@ -32,10 +32,10 @@ public class SaleAdapter extends ItemAdapter
         TextView seller = (TextView) convertView.findViewById(R.id.sellerText);
 
         type.setText(item.parse().get("Tipo"));
-        amount.setText("Monto: $" + item.parse().get("Monto"));
+        amount.setText("$" + item.parse().get("Monto"));
         date.setText(item.parse().get("Fecha"));
         store.setText(item.parse().get("Local"));
-        seller.setText("Vendedor: " + item.parse().get("Vendedor"));
+        seller.setText("" + item.parse().get("Vendedor"));
         return convertView;
     }
 
